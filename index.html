@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Addition</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">    
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+    
+    <div class='title-container'>
+        <h1>Crystal Collector</h1>
+    </div>
+
+    <div class='instructions'>
+        <p>You will be given a random number at the start of each round.</p>
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score</p>
+        <p>You win a round by matching your total score to the random number. You lose the round if your total score goes above the random number.</p>
+        <p>The value of each crystal is hidden from you until you click on it</p>
+        <p>The value of each crystal will change at the start of each new round.</p>
+    </div>
+
+    <div id='current-number'></div>
+
+    <div class='scoreboard'>
+        <div class='score-left'>
+            <p>Wins:</p>
+            <p>Losses:</p>
+        </div>
+        <div class='score-right'>
+            <p id='wins-print'></p>
+            <p id='losses-print'></p>
+        </div>
+    </div>
+
+    <div class='container crystal-box'>
+        <div class="row">
+
+            <div class='col green gem'>
+                <img id='green' src="assets/images/green.png" alt="green crystal">
+                <div class='gem-num'>
+                    <h2 id='green-num'></h2>
+                </div>
+            </div>
+
+            <div class='col yellow gem'>
+                <img id='yellow' src="assets/images/yellow.png" alt="yellow crystal">
+                <div class='gem-num'>
+                        <h2 id='yellow-num'></h2>
+                </div>
+            </div>
+            
+            <div class='col blue gem'>
+                <img id='blue' src="assets/images/blue.png" alt="blue crystal">
+                <div class='gem-num'>
+                    <h2 id='blue-num'></h2> 
+                </div>
+            </div>
+
+            <div class='col purple gem'>
+                <img id='purple' src="assets/images/purple.png" alt="purple crystal">
+                <div class='gem-num'>
+                    <h2 id='purple-num'></h2>
+                </div>                
+            </div>   
+        </div>         
+    </div>
+
+    <div class='summed-number'>
+        <p>Your total score is:</p>
+        <div id='current-score'></div>
+    </div>
+
+</body>
+</html>

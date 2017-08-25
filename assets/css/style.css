@@ -1,0 +1,13 @@
+.gem {
+    position: relative;
+}
+
+.gem-num {
+    position: absolute;
+    top: 30px;
+    left: 53px; 
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.47);
+}
