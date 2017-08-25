@@ -7,74 +7,107 @@
     <title>Crystal Addition</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">    
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-    
-    <div class='title-container'>
-        <h1>Crystal Collector</h1>
+    <div class="nav-box">
+            <nav class="navbar sticky-top navbar-dark bg-dark">
+                <div class="container justify-content-center">
+                    <h1 class="navbar-brand">Crystal Collector</h1>
+                </div>
+            </nav>
     </div>
 
-    <div class='instructions'>
+    <div class='card'>
+        <!-- <img class='card-img-top' src='#' alt="gem pile"> -->
+        <div class='card-body'>
+            <div class=' card-content container'>
+
+                <div class='scoreboard row'>
+                    <div class='col score-left'>
+                        <p>Wins:</p>
+                        <p>Losses:</p>
+                    </div>
+                    <div class='col score-right'>
+                        <p id='wins-print'></p>
+                        <p id='losses-print'></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class='container instructions'>
+        <div class='row'>
         <p>You will be given a random number at the start of each round.</p>
-        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score</p>
-        <p>You win a round by matching your total score to the random number. You lose the round if your total score goes above the random number.</p>
-        <p>The value of each crystal is hidden from you until you click on it</p>
-        <p>The value of each crystal will change at the start of each new round.</p>
-    </div>
-
-    <div id='current-number'></div>
-
-    <div class='scoreboard'>
-        <div class='score-left'>
-            <p>Wins:</p>
-            <p>Losses:</p>
         </div>
-        <div class='score-right'>
-            <p id='wins-print'></p>
-            <p id='losses-print'></p>
-        </div>
-    </div>
-
-    <div class='container crystal-box'>
         <div class="row">
-
-            <div class='col green gem'>
-                <img id='green' src="assets/images/green.png" alt="green crystal">
-                <div class='gem-num'>
-                    <h2 id='green-num'></h2>
-                </div>
-            </div>
-
-            <div class='col yellow gem'>
-                <img id='yellow' src="assets/images/yellow.png" alt="yellow crystal">
-                <div class='gem-num'>
-                        <h2 id='yellow-num'></h2>
-                </div>
-            </div>
-            
-            <div class='col blue gem'>
-                <img id='blue' src="assets/images/blue.png" alt="blue crystal">
-                <div class='gem-num'>
-                    <h2 id='blue-num'></h2> 
-                </div>
-            </div>
-
-            <div class='col purple gem'>
-                <img id='purple' src="assets/images/purple.png" alt="purple crystal">
-                <div class='gem-num'>
-                    <h2 id='purple-num'></h2>
-                </div>                
-            </div>   
-        </div>         
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score</p>
+        </div>
+        <div class="row">
+        <p>You win a round by matching your total score to the random number. You lose the round if your total score goes above the random number.</p>
+        </div>
+        <div class='row'>
+        <p>The value of each crystal is hidden from you until you click on it</p>
+        </div>
+        <div class='row'>
+        <p>The value of each crystal will change at the start of each new round.</p>
+        </div>
     </div>
 
-    <div class='summed-number'>
-        <p>Your total score is:</p>
-        <div id='current-score'></div>
-    </div>
+    <div class='scores container'>
+        <div class='row number-title justify-content-center'>Number to Match!</div>
+        <div id='current-number' class='row justify-content-center'></div>
 
+        <div class='container crystal-box'>
+            <div class="row">
+
+                <div class='col green gem'>
+                    <img id='green' src="assets/images/green.png" alt="green crystal">
+                    <div class='gem-num'>
+                        <h2 id='green-num'></h2>
+                    </div>
+                </div>
+
+                <div class='col yellow gem'>
+                    <img id='yellow' src="assets/images/yellow.png" alt="yellow crystal">
+                    <div class='gem-num'>
+                            <h2 id='yellow-num'></h2>
+                    </div>
+                </div>
+                
+                <div class='col blue gem'>
+                    <img id='blue' src="assets/images/blue.png" alt="blue crystal">
+                    <div class='gem-num'>
+                        <h2 id='blue-num'></h2> 
+                    </div>
+                </div>
+
+                <div class='col purple gem'>
+                    <img id='purple' src="assets/images/purple.png" alt="purple crystal">
+                    <div class='gem-num'>
+                        <h2 id='purple-num'></h2>
+                    </div>                
+                </div>   
+            </div>         
+        </div>
+
+        <div class='score-card card'>
+            <div class='card-body container'>
+                <div class=' card-content row'>
+                    <div class='col summed-number'>
+                        <p>Your total score is:</p>
+                    </div>
+                    <div class='col-4'>
+                        <p id='current-score'></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
