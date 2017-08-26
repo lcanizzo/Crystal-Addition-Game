@@ -20,6 +20,24 @@
             </nav>
     </div>
 
+    <div class='container instructions'>
+        <div class='row'>
+        <p>You will be given a random number at the start of each round.</p>
+        </div>
+        <div class="row">
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score</p>
+        </div>
+        <div class="row">
+        <p>You win a round by matching your total score to the random number. You lose the round if your total score goes above the random number.</p>
+        </div>
+        <div class='row'>
+        <p>The value of each crystal is hidden from you until you click on it</p>
+        </div>
+        <div class='row'>
+        <p>The value of each crystal will change at the start of each new round.</p>
+        </div>
+    </div>
+
     <div class='card'>
         <!-- <img class='card-img-top' src='#' alt="gem pile"> -->
         <div class='card-body'>
@@ -37,24 +55,6 @@
                 </div>
 
             </div>
-        </div>
-    </div>
-
-    <div class='container instructions'>
-        <div class='row'>
-        <p>You will be given a random number at the start of each round.</p>
-        </div>
-        <div class="row">
-        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score</p>
-        </div>
-        <div class="row">
-        <p>You win a round by matching your total score to the random number. You lose the round if your total score goes above the random number.</p>
-        </div>
-        <div class='row'>
-        <p>The value of each crystal is hidden from you until you click on it</p>
-        </div>
-        <div class='row'>
-        <p>The value of each crystal will change at the start of each new round.</p>
         </div>
     </div>
 
@@ -95,14 +95,16 @@
             </div>         
         </div>
 
-        <div class='score-card card'>
-            <div class='card-body container'>
-                <div class=' card-content row'>
-                    <div class='col summed-number'>
-                        <p>Your total score is:</p>
-                    </div>
-                    <div class='col-4'>
-                        <p id='current-score'></p>
+        <div class='row justify-content-md-center'>
+            <div class='score-card card'>
+                <div class='card-body container'>
+                    <div class=' card-content row score-card-content'>
+                        <div class='col summed-number'>
+                            <p>Your total score is:</p>
+                        </div>
+                        <div class='col-3'>
+                            <p id='current-score'></p>
+                        </div>
                     </div>
                 </div>
             </div>

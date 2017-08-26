@@ -79,11 +79,11 @@ body {
     margin-top: 25px;
 }
 
-.summed-number {
-    margin-top: 25px;
-    float: left;
+.score-card {
+    width: 500px;
+    margin-top: 50px;
 }
 
-.score-card {
-    width: 400px;
+.score-card-content {
+    font-size: 40px;
 }
