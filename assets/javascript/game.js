@@ -10,7 +10,6 @@ var purpleBase = 4;
 var gemValues = [ 0, 1, 3, 5, 7, 9, 11]
 
 $(document).ready(function(){     
-
         // new gem values
 var greenNum = newValue(greenBase);
 var yellowNum = newValue(yellowBase);
@@ -31,6 +30,9 @@ lossesPrint();  //print losses
         $('#green-num').show();
         isWin();
         isLoss();
+        $('#green').fadeOut(100).fadeIn(900);  
+        audio = $("#sound-1")[0];
+        audio.play();
     })
     $('#green').mouseleave(function () {
         $('#green-num').hide();
@@ -43,6 +45,9 @@ lossesPrint();  //print losses
         $('#yellow-num').show();
         isWin ();
         isLoss ();
+        $('#yellow').fadeOut(100).fadeIn(900);
+        audio = $("#sound-2")[0];
+        audio.play();
     })
     $('#yellow').mouseleave(function () {
         $('#yellow-num').hide();
@@ -55,6 +60,9 @@ lossesPrint();  //print losses
         $('#blue-num').show();
         isWin();
         isLoss();
+        $('#blue').fadeOut(100).fadeIn(900);
+        audio = $("#sound-1")[0];
+        audio.play();
     })
     $('#blue').mouseleave(function () {
         $('#blue-num').hide();
@@ -67,16 +75,20 @@ lossesPrint();  //print losses
         $('#purple-num').show();
         isWin();
         isLoss();
+        $('#purple').fadeOut(100).fadeIn(900);
+        audio = $("#sound-2")[0];
+        audio.play();
     })
     $('#purple').mouseleave(function () {
         $('#purple-num').hide();
     })
    
-//                   F U N C T I O N S
+// // // //      F U N C T I O N S       // // // //
 
 function newNumber() {          //random number
     currentNumber = Math.floor((Math.random()*50)+10);
     $('#current-number').html(currentNumber);
+    $("#current-number").toggle("explode").toggle("explode");
 };
 
 function newValue(base) {      //crystal values
@@ -111,10 +123,12 @@ function isLoss() {            //loss reset
         resetTally();
         tallyPrint();        
         newNumber();
-            greenNum = newValue(greenBase);
-            yellowNum = newValue(yellowBase);
-            blueNum = newValue(blueBase);
-            purpleNum = newValue(purpleBase);
+        greenNum = newValue(greenBase);
+        yellowNum = newValue(yellowBase);
+        blueNum = newValue(blueBase);
+        purpleNum = newValue(purpleBase);
+        $('#winsCard').animate({backgroundColor: "rgba(241, 0, 0, 0.7)"}, 'slow');
+        $('#winsCard').animate({backgroundColor: "white"}, 'slow');
     }
 }
 
@@ -129,6 +143,8 @@ function isWin() {              //win reset
         yellowNum = newValue(yellowBase);
         blueNum = newValue(blueBase);
         purpleNum = newValue(purpleBase);
+        $('#winsCard').animate({backgroundColor: "rgba(0, 179, 0, 0.7)"}, 'slow');
+        $('#winsCard').animate({backgroundColor: "white"}, 'slow');
     }
 }
 
