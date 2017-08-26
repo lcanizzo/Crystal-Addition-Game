@@ -1,11 +1,11 @@
 var currentNumber = 0;
 var wins = 0;
 var losses = 0;
+var currentTally = 0;     
 var greenBase = 1;
 var yellowBase = 2;
 var blueBase = 3;
-var purpleBase = 4;
-var currentTally = 0;        
+var purpleBase = 4;   
 
 var gemValues = [ 0, 1, 3, 5, 7, 9, 11]
 

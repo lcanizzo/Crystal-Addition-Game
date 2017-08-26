@@ -34,9 +34,15 @@ body {
     padding: 0;
 }
 
+p {
+    margin-bottom: 0;
+}
+
 .instructions {
-    font-size: 29px;
-    margin-top: 25px;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+    max-width: 890px;
 }
 
 .number-title {
@@ -59,7 +65,7 @@ body {
 }
 
 .card {
-    width: 250px; 
+    width: 150px; 
     float: left;
 }
 
@@ -80,13 +86,14 @@ body {
 }
 
 .score-card {
-    width: 350px;
+    width: 190px;
     box-sizing: border-box;
-    /* margin-top: 50px; */
+    position: relative;
+    top: 65px;
 }
 
 .score-card-content {
-    font-size: 40px;
+    font-size: 27px;
 }
 
 .summed-number {
@@ -96,4 +103,8 @@ body {
 .current-number-box {
     width: 400px;
     text-align: center;
+}
+
+img {
+    margin: 0 auto;
 }
