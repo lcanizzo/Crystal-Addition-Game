@@ -16,11 +16,6 @@ var greenNum = newValue(greenBase);
 var yellowNum = newValue(yellowBase);
 var blueNum = newValue(blueBase);
 var purpleNum = newValue(purpleBase);
-console.log('green ', greenNum);
-console.log('yellow ', yellowNum);
-console.log('blue ', blueNum);
-console.log('purple ', purpleNum);  
-
 
 resetTally();   //set tally to 0
 tallyPrint();   //print and log tally
@@ -28,7 +23,7 @@ newNumber();    //new random number
 winsPrint();    //print wins
 lossesPrint();  //print losses
 
-// On Click Events   // show value, update currentTally, hide value
+// On Gem Events   // show value, update currentTally, hide value
     $('#green').on('click', function(){
         currentTally = addToTally(greenNum);
         tallyPrint();
@@ -81,7 +76,6 @@ lossesPrint();  //print losses
 
 function newNumber() {          //random number
     currentNumber = Math.floor((Math.random()*50)+10);
-    console.log('randomNumber: ', currentNumber);
     $('#current-number').html(currentNumber);
 };
 
@@ -108,42 +102,33 @@ function addToTally(e) {       //add called # to tally
 
 function tallyPrint() {        //print current tally
     $('#current-score').html(currentTally);
-    console.log('currentTally ', currentTally);
 }
 
 function isLoss() {            //loss reset
     if (currentTally > currentNumber) {
-        console.log('LOSS');
         losses ++;
         lossesPrint();
         resetTally();
+        tallyPrint();        
         newNumber();
             greenNum = newValue(greenBase);
             yellowNum = newValue(yellowBase);
             blueNum = newValue(blueBase);
             purpleNum = newValue(purpleBase);
-            console.log('green ', greenNum);
-            console.log('yellow ', yellowNum);
-            console.log('blue ', blueNum);
-            console.log('purple ', purpleNum);
     }
 }
 
 function isWin() {              //win reset
     if (currentTally == currentNumber) {
-        console.log('WIN');
         wins ++;
         winsPrint();
         resetTally();
+        tallyPrint();
         newNumber();  
         greenNum = newValue(greenBase);
         yellowNum = newValue(yellowBase);
         blueNum = newValue(blueBase);
         purpleNum = newValue(purpleBase);
-        console.log('green ', greenNum);
-        console.log('yellow ', yellowNum);
-        console.log('blue ', blueNum);
-        console.log('purple ', purpleNum);
     }
 }
 

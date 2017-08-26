@@ -5,7 +5,7 @@
 .gem-num {
     position: absolute;
     top: 30px;
-    left: 53px; 
+    left: 80px; 
     text-align: center;
     font-size: 30px;
     color: white;
@@ -76,14 +76,24 @@ body {
 }
 
 .crystal-box {
-    margin-top: 25px;
+    margin-top: 55px;
 }
 
 .score-card {
-    width: 500px;
-    margin-top: 50px;
+    width: 350px;
+    box-sizing: border-box;
+    /* margin-top: 50px; */
 }
 
 .score-card-content {
     font-size: 40px;
+}
+
+.summed-number {
+    padding: 0 0 0 5px;
+}
+
+.current-number-box {
+    width: 400px;
+    text-align: center;
 }
